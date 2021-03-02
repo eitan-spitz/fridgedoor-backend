@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
 
     def create
-        byebug
         item = Item.find_by(fdc_id: item_params[:fdc_id])
         if item 
             render json: item
