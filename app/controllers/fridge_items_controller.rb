@@ -23,6 +23,6 @@ class FridgeItemsController < ApplicationController
 
     private
     def fridge_item_params
-        params.require(:fridge_item).permit(:fridge_id, :item_id)
+        params.require(:fridge_item).permit(:fridge_id, :item_id, :amount_num, :amount_type)
     end
 end
