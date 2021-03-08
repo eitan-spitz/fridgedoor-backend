@@ -3,4 +3,9 @@ class FridgesController < ApplicationController
         fridges = Fridge.all
         render json: fridges
     end
+
+    def show
+        fridge = Fridge.find_by(id: params[:id])
+        render json: fridge
+    end
 end

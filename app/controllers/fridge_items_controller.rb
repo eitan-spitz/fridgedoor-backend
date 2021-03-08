@@ -10,6 +10,8 @@ class FridgeItemsController < ApplicationController
         if items
             fridge_item = items.find_by(fridge_id: fridge_item_params[:fridge_id])
             if fridge_item
+                new_amount = fridge_item[:amount_num].to_i + fridge_item_params[:amount_num].to_i
+                fridge_item.update(amount_num: new_amount)
                 render json: fridge_item
             else
                 new_fridge_item = FridgeItem.create!(fridge_item_params)
