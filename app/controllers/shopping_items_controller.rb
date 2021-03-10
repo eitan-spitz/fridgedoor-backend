@@ -10,6 +10,8 @@ class ShoppingItemsController < ApplicationController
         if items
             shopping_item = items.find_by(shoppinglist_id: shopping_item_params[:shoppinglist_id])
             if shopping_item
+                new_amount = shopping_item[:amount_num].to_i + shopping_item_params[:amount_num].to_i
+                shopping_item.update(amount_num: new_amount)
                 render json: shopping_item
             else
                 new_shopping_item = ShoppingItem.create!(shopping_item_params)
