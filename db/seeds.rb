@@ -23,9 +23,9 @@ user_fam3 = UserFamily.create(user_id: user3.id, family_id: fam1.id)
 user_fam4 = UserFamily.create(user_id: user3.id, family_id: fam2.id)
 
 fridge1 = Fridge.create(name: "kitchen", family_id: fam1.id)
-fridge2 = Fridge.create(name: "kieth", family_id: fam1.id)
+fridge2 = Fridge.create(name: "Garage", family_id: fam1.id)
 
-shoppinglist1 = Shoppinglist.create(name: "groceries", family_id: fam1.id)
+shoppinglist1 = Shoppinglist.create(name: "Groceries", family_id: fam1.id)
 shoppinglist2 = Shoppinglist.create(name: "garth", family_id: fam2.id)
 
 item1 = Item.create(fdc_id: 566821, fdc_description: "CHEESE", data_type: "Branded")
