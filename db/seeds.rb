@@ -34,7 +34,7 @@ item3 = Item.create(fdc_id: 506463, fdc_description: "MILK", data_type: "Branded
 item4 = Item.create(fdc_id: 508576, fdc_description: "AVOCADO", data_type: "Branded")
 item5 = Item.create(fdc_id: 357068, fdc_description: "EGGS", data_type: "Branded")
 
-TYPES = ["Cup", "Gram", "Kilo", "Liter", "Unit"]
+TYPES = ["Oz", "Gallon", "Pound", "Unit"]
 
 fi1 = FridgeItem.create(fridge_id: fridge1.id, item_id: item1.id, amount_num: rand(5..15), amount_type: TYPES.sample)
 fi2 = FridgeItem.create(fridge_id: fridge1.id, item_id: item2.id, amount_num: rand(5..15), amount_type: TYPES.sample)
